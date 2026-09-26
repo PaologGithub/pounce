@@ -1,0 +1,12 @@
+uuid = "d290f1ee-6c54-4b01-90e6-d701748f0851"
+name = "main-node"
+description = "Main Node"
+
+[api]
+host = "0.0.0.0"
+port = 8443
+ssl_enabled = false
+
+[system]
+data_directory = "/var/lib/pounce/data"
+servers_directory = "config/servers"

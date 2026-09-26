@@ -1,7 +1,16 @@
 [workspace]
 resolver = "3"
+members = ["pounce-config","pounce-daemon"]
 
 [workspace.package]
 version = "0.0.1"
 edition = "2024"
 license = "MIT"
+
+[workspace.dependencies]
+anyhow = "1.0.104"
+nanologger = { version = "0.1.1", features = ["log"] }
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2.0.21"
+toml = "1.1.6"
+uuid = { version = "1.26.1", features = ["serde", "v4"] }

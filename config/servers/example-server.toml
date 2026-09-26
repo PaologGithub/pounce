@@ -1,0 +1,19 @@
+uuid = "3f2504e0-4f89-41d3-9a0c-0305e82c3301"
+name = "example-server"
+description = "Example server"
+autostart = true
+
+[container]
+image = "itzg/minecraft-server:latest"
+startup_command = "java -Xms1G -Xmx2G -jar server.jar nogui"
+working_directory = "."
+environment = { "EULA" = "TRUE" }
+
+[limits]
+memory_mb = 2048
+cpu_percent = 200
+disk_mb = 10240
+
+[allocations]
+primary_port = 25565
+additional_ports = []

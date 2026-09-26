@@ -1,0 +1,11 @@
+[package]
+name = "pounce-daemon"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+pounce-config        = { path = "../pounce-config" }
+
+anyhow.workspace     = true
+nanologger.workspace = true
