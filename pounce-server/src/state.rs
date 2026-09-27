@@ -4,5 +4,5 @@ pub enum ServerState {
     Starting,
     Running,
     Stopping,
-    Crashed
+    Crashed,
 }

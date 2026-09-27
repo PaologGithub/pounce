@@ -1,4 +1,2 @@
 #[derive(Debug, thiserror::Error)]
-pub enum BackendError {
-    
-}
+pub enum BackendError {}
