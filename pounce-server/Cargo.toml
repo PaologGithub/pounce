@@ -1,0 +1,13 @@
+[package]
+name = "pounce-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+pounce-config        = { path = "../pounce-config" }
+
+async-trait.workspace = true
+thiserror.workspace   = true
+tokio.workspace       = true
+uuid.workspace        = true
