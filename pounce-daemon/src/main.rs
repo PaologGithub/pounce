@@ -1,10 +1,14 @@
+use std::sync::Arc;
+
 use anyhow::{Ok, Result};
 use nanologger::{LogLevel, LoggerBuilder, debug, info, trace};
 use pounce_config::{node::NodeConfig, server::ServerConfig, traits::LoadableConfig};
+use pounce_server::{backend::vanilla::VanillaBackend, manager::ServerManager};
 
 const DEFAULT_NODE_CONFIG_PATH: &str = "config/node.toml";
 
-fn main() -> Result<()> {
+#[tokio::main]
+async fn main() -> Result<()> {
     LoggerBuilder::new()
         .level(if cfg!(debug_assertions) {
             LogLevel::Trace
@@ -43,6 +47,11 @@ fn main() -> Result<()> {
             server.allocations.primary_port
         )
     }
+
+    let manager = ServerManager::load_from(servers.clone(), Arc::new(VanillaBackend::default()));
+    trace!("Created server manager");
+
+    manager.start(servers[0].uuid).await.unwrap();
 
     Ok(())
 }

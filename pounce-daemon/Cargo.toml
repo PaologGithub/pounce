@@ -6,6 +6,8 @@ license.workspace = true
 
 [dependencies]
 pounce-config        = { path = "../pounce-config" }
+pounce-server        = { path = "../pounce-server" }
 
 anyhow.workspace     = true
 nanologger.workspace = true
+tokio.workspace      = true

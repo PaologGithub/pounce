@@ -11,6 +11,7 @@ license = "MIT"
 async-trait = "0.1.92"
 anyhow = "1.0.104"
 nanologger = { version = "0.1.1", features = ["log"] }
+send_ctrlc = { version = "0.6.0", features = ["tokio"] }
 serde = { version = "1.0.229", features = ["derive"] }
 thiserror = "2.0.21"
 tokio = { version = "1.53.1", features = ["full"] }

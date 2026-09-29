@@ -1,0 +1,19 @@
+uuid = "013a8570-8e31-4457-b33b-dd39ec296149"
+name = "example-basic-server"
+description = "Example basic server"
+autostart = true
+
+[container]
+image = ""
+startup_command = "echo Hello There"
+working_directory = "."
+environment = { }
+
+[limits]
+memory_mb = 2048
+cpu_percent = 200
+disk_mb = 10240
+
+[allocations]
+primary_port = 25565
+additional_ports = []

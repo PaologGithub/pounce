@@ -34,6 +34,7 @@ impl ServerManager {
 
             let mut server =
                 ManagedServer::new(config, backend.clone(), command_rx, event_tx.clone());
+            let _ = backend.add_server(&server);
             let handle = tokio::spawn(async move {
                 server.update_loop().await;
             });

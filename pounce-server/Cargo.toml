@@ -9,6 +9,7 @@ pounce-config        = { path = "../pounce-config" }
 
 anyhow.workspace      = true
 async-trait.workspace = true
+send_ctrlc.workspace  = true
 thiserror.workspace   = true
 tokio.workspace       = true
 uuid.workspace        = true
